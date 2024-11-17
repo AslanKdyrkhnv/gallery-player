@@ -12,11 +12,12 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
     />
+    <script defer src="./head.js"></script>
 
-    <title>Simple Tailwind Starter</title>
+    <title>Gallery images</title>
   </head>
   <body class="bg-slate-100 flex items-center justify-center min-h-screen">
-    <div class="bg-white p-6 md:p-32 shadow-xl mx-4  my-4 rounded-2xl flex flex-col space-y-10 md:space-y-20">
+    <div class="bg-white p-6 md:p-32 shadow-xl mx-4  my-4 rounded-2xl flex flex-col space-y-10 md:space-y-20 h-[80vh]">
       <div class="flex items-left gap-4 md:justify-end flex-col items-center md:flex-row">
         <div class="group text-black px-6 py-2">
           <div class="text-md font-normal tracking-wide capitalize">
@@ -47,7 +48,7 @@
       <!-- Search container -->
        <div class="flex md:flex-row flex-col items-center justify-between md:space-y-0 space-y-4 gap-2">
         <div class="flex  justify-between border-b-2 p-1">
-          <input type="text" placeholder=" Search" class="pl-2  placeholder:font-light text-2xl outline-none font-sans ">
+          <input id="search" type="text" placeholder=" Search" class="pl-2  placeholder:font-light text-2xl outline-none font-sans ">
           <button class="px-2 hover:scale-105 transition-all duration-200 text-center">
             <i class="fa-solid fa-magnifying-glass text-2xl"></i>
             
@@ -61,8 +62,8 @@
        
 
        <div class="grid gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mx-auto">
-          <div class="relative group">
-            <a href="./images/image2.jpg" data-fancybox="gallery" data-caption="Caption #1">
+          <div class="relative group item-img" data-text="window">
+            <a href="./images/image2.jpg" class="" data-fancybox="gallery"  data-caption="Caption #1">
               <img src="./images/image2.jpg" class="w-72" alt="img"/>
             </a>
             <div class="absolute bottom-0 left-0 right-0 p-2 px-4 text-white duration-500 bg-black opacity-0 group-hover:opacity-100 bg-opacity-40 flex justify-between items-center">
@@ -75,8 +76,8 @@
               </div>
             </div>
           </div>
-          <div class="relative group">
-            <a href="./images/image3.jpg" data-fancybox="gallery" data-caption="Caption #2">
+          <div class="relative group item-img" data-text="build sky">
+            <a href="./images/image3.jpg" class="" data-fancybox="gallery" data-caption="Caption #2">
               <img src="./images/image3.jpg" class="w-72" alt="img"/>
             </a>
             <div class="absolute bottom-0 left-0 right-0 p-2 px-4 text-white duration-500 bg-black opacity-0 group-hover:opacity-100 bg-opacity-40 flex justify-between items-center">
@@ -89,8 +90,8 @@
               </div>
             </div>
           </div>
-          <div class="relative group">
-            <a href="./images/image4.jpg" data-fancybox="gallery" data-caption="Caption #3">
+          <div class="relative group item-img" data-text="color">
+            <a href="./images/image4.jpg" class="" data-fancybox="gallery" data-caption="Caption #3">
               <img src="./images/image4.jpg" class="w-72" alt="img"/>
             </a>
             <div class="absolute bottom-0 left-0 right-0 p-2 px-4 text-white duration-500 bg-black opacity-0 group-hover:opacity-100 bg-opacity-40 flex justify-between items-center">
@@ -103,8 +104,8 @@
               </div>
             </div>
           </div>
-          <div class="relative group">
-            <a href="./images/image5.jpg" data-fancybox="gallery" data-caption="Caption #4">
+          <div class="relative group item-img" data-text="buildings">
+            <a href="./images/image5.jpg" class="" data-fancybox="gallery" data-caption="Caption #4">
               <img src="./images/image5.jpg" class="w-72" alt="img"/>
             </a>
             <div class="absolute bottom-0 left-0 right-0 p-2 px-4 text-white duration-500 bg-black opacity-0 group-hover:opacity-100 bg-opacity-40 flex justify-between items-center">
@@ -117,8 +118,8 @@
               </div>
             </div>
           </div>
-          <div class="relative group">
-            <a href="./images/image6.jpg" data-fancybox="gallery" data-caption="Caption #5">
+          <div class="relative group item-img" data-text="wall with door">
+            <a href="./images/image6.jpg" class="" data-fancybox="gallery" data-caption="Caption #5">
               <img src="./images/image6.jpg" class="w-72" alt="img"/>
             </a>
             <div class="absolute bottom-0 left-0 right-0 p-2 px-4 text-white duration-500 bg-black opacity-0 group-hover:opacity-100 bg-opacity-40 flex justify-between items-center">
@@ -131,8 +132,8 @@
               </div>
             </div>
           </div>
-          <div class="relative group">
-            <a href="./images/image1.jpg" data-fancybox="gallery" data-caption="Caption #6">
+          <div class="relative group item-img " data-text="face with makeup">
+            <a href="./images/image1.jpg" class="" data-fancybox="gallery" data-caption="Caption #6">
               <img src="./images/image1.jpg" class="w-72" alt="img"/>
             </a>
             <div class="absolute bottom-0 left-0 right-0 p-2 px-4 text-white duration-500 bg-black opacity-0 group-hover:opacity-100 bg-opacity-40 flex justify-between items-center">
@@ -145,10 +146,6 @@
               </div>
             </div>
           </div>
-
-          
-          
-          
        </div>
 
     </div>
